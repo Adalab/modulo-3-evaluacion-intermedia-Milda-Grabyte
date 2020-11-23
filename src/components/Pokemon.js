@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Pokemon.scss'
 
 class Pokemon extends React.Component {
   render() {
@@ -13,7 +14,7 @@ class Pokemon extends React.Component {
     return (
       <article className='pokemon-card'>
         <div className='pokemon-image-container'>
-          <img className='pokemon-image' src={this.props.url} alt='pokemon'></img>
+          <img className='pokemon-image' src={this.props.url} alt={this.props.name}></img>
         </div>
         <h2 className='pokemon-name'>{this.props.name.capitalize()}</h2>
         <ul className='pokemon-types'>{pokeTypes}</ul>
